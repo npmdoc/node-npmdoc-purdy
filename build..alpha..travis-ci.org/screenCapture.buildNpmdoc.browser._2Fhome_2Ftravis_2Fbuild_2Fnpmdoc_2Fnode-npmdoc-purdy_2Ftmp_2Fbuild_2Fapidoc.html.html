@@ -1,0 +1,115 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a href="https://github.com/danielb2/purdy.js">purdy (v2.2.1)</a>
+</h1>
+<h4>Pretty print objects in real purdy colors. Allows clearer visualization of objects than you get from most pretty printers due to colors. It will also print out the complete path to an object, something that's extremly useful for debugging. Purdy will also</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.purdy">module purdy</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.purdy.stringify">
+            function <span class="apidocSignatureSpan">purdy.</span>stringify
+            <span class="apidocSignatureSpan">(object, options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.purdy" id="apidoc.module.purdy">module purdy</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.purdy.stringify" id="apidoc.element.purdy.stringify">
+        function <span class="apidocSignatureSpan">purdy.</span>stringify
+        <span class="apidocSignatureSpan">(object, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">stringify = function (object, options) {
+
+    const Purdy = new internals.purdy(object, options);
+    return Purdy.stringify();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    * `pathPrefix` - prefix for path. default: `// `
+    * `arrayIndex` - enables index printing for arrays. default: `true`
+    * `indent` - defines the number of spaces to indent default: `4`
+    * `align` - determines how to align object keys. default: `left`
+    * `depth` - tells purdy how many times to recurse while formatting the object. This is useful for viewing complicated objects
+. default: `2`. Set to `null` to recurse indefinitely
+
+
+### `Purdy.<span class="apidocCodeKeywordSpan">stringify</span>(object, [options])`
+
+This function returns a string without printing it to stdout. This may prove
+to be useful for log files other other applications.
+
+``` javascript
+const purdyString = Purdy.stringify({a: 'b'}, {plain: true});
+writeLog(purdyString);
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>
