@@ -1,9 +1,14 @@
-# api documentation for  [purdy (v2.2.1)](https://github.com/danielb2/purdy.js)  [![npm package](https://img.shields.io/npm/v/npmdoc-purdy.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-purdy) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-purdy.svg)](https://travis-ci.org/npmdoc/node-npmdoc-purdy)
+# npmdoc-purdy
+
+#### api documentation for  [purdy (v2.2.1)](https://github.com/danielb2/purdy.js)  [![npm package](https://img.shields.io/npm/v/npmdoc-purdy.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-purdy) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-purdy.svg)](https://travis-ci.org/npmdoc/node-npmdoc-purdy)
+
 #### Pretty print objects in real purdy colors. Allows clearer visualization of objects than you get from most pretty printers due to colors. It will also print out the complete path to an object, something that's extremly useful for debugging. Purdy will also
 
-[![NPM](https://nodei.co/npm/purdy.png?downloads=true)](https://www.npmjs.com/package/purdy)
+[![NPM](https://nodei.co/npm/purdy.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/purdy)
 
-[![apidoc](https://npmdoc.github.io/node-npmdoc-purdy/build/screenCapture.buildNpmdoc.browser._2Fhome_2Ftravis_2Fbuild_2Fnpmdoc_2Fnode-npmdoc-purdy_2Ftmp_2Fbuild_2Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-purdy/build/apidoc.html)
+- [https://npmdoc.github.io/node-npmdoc-purdy/build/apidoc.html](https://npmdoc.github.io/node-npmdoc-purdy/build/apidoc.html)
+
+[![apidoc](https://npmdoc.github.io/node-npmdoc-purdy/build/screenCapture.buildCi.browser.%252Ftmp%252Fbuild%252Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-purdy/build/apidoc.html)
 
 ![npmPackageListing](https://npmdoc.github.io/node-npmdoc-purdy/build/screenCapture.npmPackageListing.svg)
 
@@ -54,13 +59,11 @@
     "main": "lib/index.js",
     "maintainers": [
         {
-            "name": "danielb",
-            "email": "nefar@otherware.org"
+            "name": "danielb"
         }
     ],
     "name": "purdy",
     "optionalDependencies": {},
-    "readme": "ERROR: No README data found!",
     "repository": {
         "type": "git",
         "url": "git+https://github.com/danielb2/purdy.js.git"
@@ -70,48 +73,6 @@
     },
     "version": "2.2.1"
 }
-```
-
-
-
-# <a name="apidoc.tableOfContents"></a>[table of contents](#apidoc.tableOfContents)
-
-#### [module purdy](#apidoc.module.purdy)
-1.  [function <span class="apidocSignatureSpan">purdy.</span>stringify (object, options)](#apidoc.element.purdy.stringify)
-
-
-
-# <a name="apidoc.module.purdy"></a>[module purdy](#apidoc.module.purdy)
-
-#### <a name="apidoc.element.purdy.stringify"></a>[function <span class="apidocSignatureSpan">purdy.</span>stringify (object, options)](#apidoc.element.purdy.stringify)
-- description and source-code
-```javascript
-stringify = function (object, options) {
-
-    const Purdy = new internals.purdy(object, options);
-    return Purdy.stringify();
-}
-```
-- example usage
-```shell
-...
-    * 'pathPrefix' - prefix for path. default: '// '
-    * 'arrayIndex' - enables index printing for arrays. default: 'true'
-    * 'indent' - defines the number of spaces to indent default: '4'
-    * 'align' - determines how to align object keys. default: 'left'
-    * 'depth' - tells purdy how many times to recurse while formatting the object. This is useful for viewing complicated objects
-. default: '2'. Set to 'null' to recurse indefinitely
-
-
-### 'Purdy.stringify(object, [options])'
-
-This function returns a string without printing it to stdout. This may prove
-to be useful for log files other other applications.
-
-''' javascript
-const purdyString = Purdy.stringify({a: 'b'}, {plain: true});
-writeLog(purdyString);
-...
 ```
 
 
